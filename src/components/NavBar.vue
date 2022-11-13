@@ -1,5 +1,7 @@
 <template>
-  <nav class="flex justify-between p-3 pt-7 items-center">
+  <nav
+    class="flex justify-between p-5 items-center bg-stone-100 sm:container lg:container"
+  >
     <div class="flex justify-around gap-5 text-black text-base font-medium">
       <router-link
         v-for="link in links"
