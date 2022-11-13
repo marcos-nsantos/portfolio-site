@@ -29,10 +29,10 @@ export default {
       links: [
         { name: "Home", path: "/" },
         { name: "Projects", path: "/projects" },
-        { name: "Contact", path: "/contact" }
-      ]
+        { name: "Contact", path: "/contact" },
+      ],
     };
-  }
+  },
 };
 </script>
 
