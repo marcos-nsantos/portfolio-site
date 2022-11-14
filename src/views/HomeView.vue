@@ -12,7 +12,7 @@
     </div>
 
     <div
-      class="flex flex-col justify-center items-center mt-10 overflow-x-auto w-full flex-wrap"
+      class="flex flex-col justify-center items-center mt-10 overflow-x-hidden hover:overflow-x-auto w-full flex-wrap"
     >
       <div class="flex justify-center gap-5 mt-5 text-3xl p-2">
         <i class="w-6 h-6 fa-brands fa-python" />
