@@ -12,28 +12,18 @@
     </div>
 
     <div
-      class="flex flex-col justify-center items-center mt-10 overflow-x-hidden hover:overflow-x-auto w-full flex-wrap"
+      class="flex flex-col justify-center items-center mt-24 overflow-x-hidden hover:overflow-x-auto w-full flex-wrap"
     >
-      <div class="flex justify-center gap-5 mt-5 text-3xl p-2">
-        <i class="w-6 h-6 fa-brands fa-python" />
-        <i class="w-6 h-6 fa-brands fa-golang" />
-        <i class="w-6 h-6 fa-brands fa-php" />
-        <i class="w-6 h-6 fa-brands fa-docker" />
-        <i class="w-6 h-6 fa-brands fa-git-alt" />
-        <i class="w-6 h-6 fa-brands fa-aws" />
-        <i class="w-6 h-6 fa-brands fa-linux" />
-        <i class="w-6 h-6 fa-brands fa-vuejs" />
-        <i class="w-6 h-6 fa-brands fa-html5" />
-        <i class="w-6 h-6 fa-brands fa-css3-alt" />
-        <i class="w-6 h-6 fa-brands fa-js-square" />
-      </div>
+      <TechStacksIcons />
     </div>
   </main>
 </template>
 
 <script>
+import TechStacksIcons from "@/components/TechStacksIcons.vue";
 export default {
   name: "HomeView",
+  components: { TechStacksIcons },
 };
 </script>
 
