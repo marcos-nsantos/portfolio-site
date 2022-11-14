@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="flex flex-col justify-center items-center h-screen bg-stone-200 sm:container lg:container"
-  >
+  <main class="flex flex-col justify-center items-center h-screen bg-stone-200">
     <h1 class="text-5xl font-bold text-gray-900">Marcos Santos</h1>
     <h2 class="text-2xl font-medium text-gray-900">Back End Developer</h2>
     <div class="flex justify-center gap-5 mt-5 text-3xl">
@@ -14,7 +12,7 @@
     </div>
 
     <div
-      class="flex flex-col justify-center items-center mt-10 overflow-x-auto scroll-px-3 w-full"
+      class="flex flex-col justify-center items-center mt-10 overflow-x-auto w-full flex-wrap"
     >
       <div class="flex justify-center gap-5 mt-5 text-3xl p-2">
         <i class="w-6 h-6 fa-brands fa-python" />
