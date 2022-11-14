@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex justify-between p-5 items-center bg-stone-100 sm:container lg:container"
+    class="flex justify-between p-5 items-center bg-stone-200 sm:container lg:container absolute w-full lg:justify-around"
   >
     <div class="flex justify-around gap-5 text-black text-base font-medium">
       <router-link
@@ -12,14 +12,15 @@
         {{ link.name }}
       </router-link>
     </div>
-    <div class="flex justify-between gap-3 text-xl">
-      <a href="https://github.com/marcos-nsantos" target="_blank">
-        <i class="w-6 h-6 fa-brands fa-github" />
-      </a>
-      <a href="https://www.linkedin.com/in/marcos-santos-d" target="_blank">
-        <i class="w-6 h-6 fa-brands fa-linkedin" />
-      </a>
-    </div>
+
+    <a
+      type="button"
+      href="#"
+      class="flex items center items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-900 rounded-md hover:bg-blue-800 transition-colors duration-300"
+    >
+      <i class="w-4 h-4 fa-solid fa-download" />
+      Resume
+    </a>
   </nav>
 </template>
 
@@ -31,7 +32,6 @@ export default {
       links: [
         { name: "Home", path: "/" },
         { name: "Projects", path: "/projects" },
-        { name: "Contact", path: "/contact" },
       ],
     };
   },
