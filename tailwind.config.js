@@ -3,7 +3,11 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      scale: {
+        '12': '1.2',
+      },
+    },
   },
   plugins: [],
 };
