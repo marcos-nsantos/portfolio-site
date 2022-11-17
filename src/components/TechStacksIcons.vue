@@ -4,43 +4,43 @@
   >
     <i
       class="w-6 h-6 fa-brands fa-python"
-      aria-label="Python. Programming language"
+      aria-roledescription="Python. Programming language"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-golang"
-      aria-label="Go. Programming language"
+      aria-roledescription="Go. Programming language"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-docker"
-      aria-label="Docker. Containerization platform"
+      aria-roledescription="Docker. Containerization platform"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-git-alt"
-      aria-label="Git. Version control system"
+      aria-roledescription="Git. Version control system"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-aws"
-      aria-label="AWS. Cloud computing platform"
+      aria-roledescription="AWS. Cloud computing platform"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-linux"
-      aria-label="Linux. Distribution of the Unix operating system"
+      aria-roledescription="Linux. Distribution of the Unix operating system"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-vuejs"
-      aria-label="Vue. SPA JavaScript framework"
+      aria-roledescription="Vue. SPA JavaScript framework"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-html5"
-      aria-label="HTML5. Markup language"
+      aria-roledescription="HTML5. Markup language"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-css3-alt"
-      aria-label="CSS3. Style sheet language"
+      aria-roledescription="CSS3. Style sheet language"
     ></i>
     <i
       class="w-6 h-6 fa-brands fa-js-square"
-      aria-label="JavaScript. Programming language"
+      aria-roledescription="JavaScript. Programming language"
     ></i>
   </div>
 </template>
