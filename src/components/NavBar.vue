@@ -1,11 +1,14 @@
 <template>
-  <nav class="flex justify-end p-5 bg-stone-200 absolute w-full">
-    <DownloadButton :url="url">Resume</DownloadButton>
-  </nav>
+  <div class="absolute w-full bg-stone-200">
+    <nav class="flex justify-end py-5 bg-stone-200 w-11/12 lg:w-7/12 mx-auto">
+      <DownloadButton :url="url">Resume</DownloadButton>
+    </nav>
+  </div>
 </template>
 
 <script>
 import DownloadButton from "@/components/DownloadButton.vue";
+
 export default {
   name: "NavBar",
   components: { DownloadButton },
