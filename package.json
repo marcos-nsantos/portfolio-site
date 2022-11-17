@@ -5,9 +5,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "start": "serve -s dist -l tcp://0.0.0.0:${PORT:-3000} -n"
   },
   "dependencies": {
+    "serve": "^14.1.1",
     "vue": "^3.2.41",
     "vue-router": "^4.1.5"
   },
