@@ -11,9 +11,7 @@
       </a>
     </div>
 
-    <div
-      class="flex flex-col justify-center items-center mt-24 overflow-x-auto py-2 w-11/12 lg:w-full flex-wrap"
-    >
+    <div class="flex flex-col items-center mt-24 py-2 w-11/12">
       <TechStacksIcons />
     </div>
   </main>
