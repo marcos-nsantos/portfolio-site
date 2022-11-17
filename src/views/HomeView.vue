@@ -9,7 +9,7 @@
         rel="noopener noreferrer"
       >
         <i
-          class="w-6 h-6 fa-brands fa-github hover:text-blue-900"
+          class="w-6 h-6 fa-brands fa-github hover:text-blue-900 hover:scale-12"
           aria-roledescription="GitHub. Project repository hosting service for version control using Git"
         ></i>
       </a>
@@ -19,7 +19,7 @@
         rel="noopener noreferrer"
       >
         <i
-          class="w-6 h-6 fa-brands fa-linkedin hover:text-blue-900"
+          class="w-6 h-6 fa-brands fa-linkedin hover:text-blue-900 hover:scale-12"
           aria-roledescription="LinkedIn. Professional social network"
         ></i>
       </a>
