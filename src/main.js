@@ -4,13 +4,14 @@ import router from "./router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import * as solidIcons from "@fortawesome/free-solid-svg-icons";
 import * as brandsIcons from "@fortawesome/free-brands-svg-icons";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 import "@/assets/css/index.css";
 
 library.add(
-  faDownload,
+  solidIcons.faDownload,
   brandsIcons.faLinkedin,
   brandsIcons.faGithubAlt,
   brandsIcons.faPython,
@@ -22,7 +23,10 @@ library.add(
   brandsIcons.faVuejs,
   brandsIcons.faHtml5,
   brandsIcons.faCss3Alt,
-  brandsIcons.faJsSquare
+  brandsIcons.faJsSquare,
+  solidIcons.faArrowLeft,
+  solidIcons.faHome,
+  faTriangleExclamation
 );
 
 const app = createApp(App);
