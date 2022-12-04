@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="flex flex-col justify-center items-center h-screen bg-stone-200"
-  >
+  <main class="flex flex-col justify-center items-center h-screen bg-stone-200">
     <font-awesome-icon
       class="text-5xl text-red-900"
       icon="exclamation-triangle"
@@ -11,7 +9,9 @@
     <h2 class="text-2xl font-medium text-gray-900">Page not found</h2>
 
     <div class="mt-12 font-semibold">
-      <div class="flex justify-center gap-5 text-xl hover:text-blue-900 hover:scale-105 transition-transform duration-200">
+      <div
+        class="flex justify-center gap-5 text-xl hover:text-blue-900 hover:scale-105 transition-transform duration-200"
+      >
         <router-link to="/">
           <font-awesome-icon
             icon="fa-solid fa-home"
@@ -21,7 +21,9 @@
         </router-link>
       </div>
 
-      <div class="flex justify-center gap-5 mt-2 text-xl hover:text-blue-900 hover:scale-105 transition-transform duration-200">
+      <div
+        class="flex justify-center gap-5 mt-2 text-xl hover:text-blue-900 hover:scale-105 transition-transform duration-200"
+      >
         <a href="#" @click="goBack">
           <font-awesome-icon
             icon="fa-solid fa-arrow-left"
@@ -44,5 +46,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

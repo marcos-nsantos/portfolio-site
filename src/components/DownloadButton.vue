@@ -19,5 +19,3 @@ export default {
   props: ["url", "description"],
 };
 </script>
-
-<style scoped></style>

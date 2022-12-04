@@ -42,5 +42,3 @@ export default {
   components: { FontAwesomeIcon, TechStacksIcons },
 };
 </script>
-
-<style scoped></style>
