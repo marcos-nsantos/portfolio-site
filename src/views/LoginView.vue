@@ -3,24 +3,27 @@
     <h1 class="text-5xl font-bold text-gray-900">Login</h1>
     <h2 class="text-2xl font-medium text-gray-900">Access your account</h2>
 
-    <form class="flex flex-col gap-5 mt-5 w-11/12 md:w-1/2 lg:w-1/3">
+    <form
+      class="flex flex-col gap-5 mt-5 w-11/12 md:w-1/2 lg:w-1/3"
+      @submit.prevent="onSubmit"
+    >
       <div class="flex flex-col gap-2">
         <BaseInput
-          v-model="email"
-          type="email"
           label="Email"
-          placeholder="Enter your email"
-          required
+          type="email"
+          v-model="email"
+          :error="emailError"
+          @change="handleChange"
+          @blur="handleChange"
         />
       </div>
 
       <div class="flex flex-col gap-2">
         <BaseInput
-          v-model="password"
-          type="password"
           label="Password"
-          placeholder="Enter your password"
-          required
+          type="password"
+          v-model="password"
+          :error="passwordError"
         />
       </div>
 
@@ -35,15 +38,53 @@
 </template>
 
 <script>
+import { useField, useForm } from "vee-validate";
 import BaseInput from "../components/BaseInput.vue";
 
 export default {
-  name: "LoginVue",
   components: { BaseInput },
-  data() {
+  setup() {
+    function onSubmit() {
+      alert("Submitted");
+    }
+
+    const validations = {
+      email: (value) => {
+        if (!value) return "This field is required";
+
+        const regex =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!regex.test(String(value).toLowerCase())) {
+          return "Please enter a valid email address";
+        }
+        return true;
+      },
+
+      password: (value) => {
+        const requiredMessage = "This field is required";
+        if (value === undefined || value === null) return requiredMessage;
+        if (!String(value).length) return requiredMessage;
+        return true;
+      },
+    };
+
+    useForm({ validationSchema: validations });
+
+    const {
+      value: email,
+      errorMessage: emailError,
+      handleChange,
+    } = useField("email");
+    const { value: password, errorMessage: passwordError } =
+      useField("password");
+
     return {
-      email: "",
-      password: "",
+      onSubmit,
+      email,
+      emailError,
+      password,
+      passwordError,
+      handleChange,
     };
   },
 };
