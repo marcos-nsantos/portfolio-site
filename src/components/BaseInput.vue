@@ -1,22 +1,38 @@
 <template>
-  <label v-if="label" class="text-lg font-semibold" :for="label">{{
-    label
-  }}</label>
+  <label v-if="label" :for="uuid">
+    {{ label }}
+  </label>
   <input
-    :id="label"
-    v-bind="$attrs"
+    class="border-2 border-gray-900 rounded-md p-2 focus:outline-none focus:border-blue-900"
+    v-bind="{
+      ...$attrs,
+      onInput: updateValue,
+    }"
+    :id="uuid"
     :value="modelValue"
     :placeholder="label"
-    @input="$emit('update:modelValue', $event.target.value)"
-    class="border-2 border-gray-900 rounded-md p-2 focus:outline-none focus:border-blue-900"
+    :aria-describedby="error ? `${uuid}-error` : null"
+    :aria-invalid="error ? true : false"
+    :class="{ error }"
   />
+  <BaseErrorMessage v-if="error" :id="`${uuid}-error`">
+    {{ error }}
+  </BaseErrorMessage>
 </template>
 
 <script>
+import SetupFormComponent from "../features/setupFormComponents";
+import UniqueID from "../features/uniqueID";
+import BaseErrorMessage from "./BaseErrorMessage.vue";
+
 export default {
-  name: "BaseInput",
+  components: { BaseErrorMessage },
   props: {
     label: {
+      type: String,
+      default: "",
+    },
+    error: {
       type: String,
       default: "",
     },
@@ -25,7 +41,14 @@ export default {
       default: "",
     },
   },
+  setup(props, context) {
+    const { updateValue } = SetupFormComponent(props, context);
+    const uuid = UniqueID().getID();
+
+    return {
+      updateValue,
+      uuid,
+    };
+  },
 };
 </script>
-
-<style scoped></style>
